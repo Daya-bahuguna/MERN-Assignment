@@ -8,51 +8,75 @@
 
     <link rel="icon" href="./favicon1_io/favicon.ico?v=2" type="image/x-icon">
 
-    <!-- Week 5.3 - Google Font: Poppins -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Week 5.1 - Basic CSS foundation */
+        /* Week 5.4 - CSS Variables */
+
+        :root {
+            --color-background: #f4f6ff;
+            --color-text: #303653;
+            --color-navigation: #28345c;
+            --color-primary: #5145cd;
+            --color-secondary: #087f8c;
+            --color-heading-background: #e3e7ff;
+            --color-card: #ffffff;
+            --color-border: #d9deef;
+            --color-input-border: #c5cbe0;
+
+            --spacing-small: 10px;
+            --spacing-medium: 20px;
+            --spacing-large: 25px;
+
+            --radius-small: 6px;
+            --radius-medium: 10px;
+            --radius-large: 12px;
+        }
+
+        /* Basic styling */
+
+        * {
+            box-sizing: border-box;
+        }
 
         body {
-            background-color: #f4f6ff;
-            color: #303653;
+            background-color: var(--color-background);
+            color: var(--color-text);
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
-            padding: 25px;
+            padding: var(--spacing-large);
             line-height: 1.6;
         }
 
         nav {
-            background-color: #28345c;
+            background-color: var(--color-navigation);
             padding: 16px;
-            border-radius: 10px;
-            margin-bottom: 25px;
+            border-radius: var(--radius-medium);
+            margin-bottom: var(--spacing-large);
         }
 
         nav a {
-            color: #ffffff;
+            color: var(--color-card);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             margin: 8px;
         }
 
-        /* Week 5.2 - Element selector and typography */
-
         h1 {
-            background-color: #e3e7ff;
-            color: #5145cd;
+            background-color: var(--color-heading-background);
+            color: var(--color-primary);
             text-align: center;
-            padding: 25px;
-            border-radius: 12px;
+            padding: var(--spacing-large);
+            border-radius: var(--radius-large);
             letter-spacing: 1px;
             font-size: 36px;
         }
 
         h2 {
-            color: #087f8c;
+            color: var(--color-secondary);
             margin-top: 28px;
             font-size: 24px;
         }
@@ -61,56 +85,55 @@
             font-size: 17px;
         }
 
-        /* Universal selector */
-        * {
-            box-sizing: border-box;
+        /* ID selector */
+
+        #hero {
+            background-color: var(--color-heading-background);
+            padding: var(--spacing-large);
+            border-radius: var(--radius-large);
         }
 
         /* Class selector */
-        .card {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
 
-        /* ID selector */
-        #hero {
-            background-color: #e3e7ff;
-            padding: 25px;
-            border-radius: 12px;
+        .card {
+            background-color: var(--color-card);
+            padding: var(--spacing-medium);
+            border-radius: var(--radius-large);
+            margin: var(--spacing-medium) 0;
         }
 
         /* Table styling */
+
         table {
             width: 100%;
-            background-color: #ffffff;
+            background-color: var(--color-card);
             border-collapse: collapse;
             margin: 15px 0;
         }
 
         caption {
-            color: #5145cd;
-            font-weight: bold;
+            color: var(--color-primary);
+            font-weight: 600;
             padding: 12px;
         }
 
         th {
-            background-color: #5145cd;
-            color: #ffffff;
+            background-color: var(--color-primary);
+            color: var(--color-card);
             padding: 12px;
         }
 
         td {
             padding: 12px;
-            border: 1px solid #d9deef;
+            border: 1px solid var(--color-border);
         }
 
         /* Form styling */
+
         form {
-            background-color: #ffffff;
+            background-color: var(--color-card);
             padding: 22px;
-            border-radius: 12px;
+            border-radius: var(--radius-large);
             margin-top: 15px;
         }
 
@@ -118,14 +141,14 @@
         select,
         textarea {
             padding: 9px;
-            border: 1px solid #c5cbe0;
-            border-radius: 6px;
+            border: 1px solid var(--color-input-border);
+            border-radius: var(--radius-small);
             font-family: inherit;
         }
 
         button {
-            background-color: #087f8c;
-            color: #ffffff;
+            background-color: var(--color-secondary);
+            color: var(--color-card);
             padding: 11px 22px;
             border: none;
             border-radius: 7px;
@@ -192,33 +215,18 @@
         <form action="#" method="post">
             <p>
                 <label for="name">Name:</label><br>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name"
-                    required
-                >
+                <input type="text" id="name" name="name"
+                       placeholder="Your name" required>
             </p>
 
             <p>
                 <label for="email">Email:</label><br>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                >
+                <input type="email" id="email" name="email" required>
             </p>
 
             <p>
                 <label for="pass">Password:</label><br>
-                <input
-                    type="password"
-                    id="pass"
-                    name="pass"
-                    required
-                >
+                <input type="password" id="pass" name="pass" required>
             </p>
 
             <p>
@@ -233,7 +241,6 @@
 
             <p>
                 Gender:<br>
-
                 <input type="radio" name="gender" id="m" value="Male">
                 <label for="m">Male</label>
 
@@ -243,7 +250,6 @@
 
             <p>
                 Interests:<br>
-
                 <input type="checkbox" id="web" name="interests" value="Web">
                 <label for="web">Web</label>
 
