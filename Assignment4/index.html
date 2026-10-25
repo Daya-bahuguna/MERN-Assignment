@@ -8,13 +8,19 @@
 
     <link rel="icon" href="./favicon1_io/favicon.ico?v=2" type="image/x-icon">
 
+    <!-- Week 5.3 - Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         /* Week 5.1 - Basic CSS foundation */
 
         body {
             background-color: #f4f6ff;
             color: #303653;
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
             padding: 25px;
             line-height: 1.6;
         }
@@ -33,19 +39,49 @@
             margin: 8px;
         }
 
+        /* Week 5.2 - Element selector and typography */
+
         h1 {
             background-color: #e3e7ff;
             color: #5145cd;
             text-align: center;
             padding: 25px;
             border-radius: 12px;
+            letter-spacing: 1px;
+            font-size: 36px;
         }
 
         h2 {
             color: #087f8c;
             margin-top: 28px;
+            font-size: 24px;
         }
 
+        p {
+            font-size: 17px;
+        }
+
+        /* Universal selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Class selector */
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        /* ID selector */
+        #hero {
+            background-color: #e3e7ff;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        /* Table styling */
         table {
             width: 100%;
             background-color: #ffffff;
@@ -70,6 +106,7 @@
             border: 1px solid #d9deef;
         }
 
+        /* Form styling */
         form {
             background-color: #ffffff;
             padding: 22px;
@@ -77,10 +114,13 @@
             margin-top: 15px;
         }
 
-        input, select, textarea {
+        input,
+        select,
+        textarea {
             padding: 9px;
             border: 1px solid #c5cbe0;
             border-radius: 6px;
+            font-family: inherit;
         }
 
         button {
@@ -90,39 +130,12 @@
             border: none;
             border-radius: 7px;
             cursor: pointer;
-        }
-
-        /* Week 5.2 - Four types of CSS selectors */
-
-        /* 1. Universal selector: selects every element */
-        * {
-            box-sizing: border-box;
-        }
-
-        /* 2. Element selector: selects all h1 elements */
-        h1 {
-            letter-spacing: 1px;
-        }
-
-        /* 3. Class selector: styles elements with class="card" */
-        .card {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
-
-        /* 4. ID selector: styles the element with id="hero" */
-        #hero {
-            background-color: #e3e7ff;
-            padding: 25px;
-            border-radius: 12px;
+            font-family: inherit;
         }
     </style>
 </head>
 
 <body>
-
     <nav>
         <a href="index.html">Home</a> |
         <a href="about.htm">About</a> |
@@ -155,6 +168,7 @@
                     <td>16 Nov</td>
                     <td>Computer Lab</td>
                 </tr>
+
                 <tr>
                     <td>Code Sprint</td>
                     <td>25 Nov</td>
@@ -178,18 +192,33 @@
         <form action="#" method="post">
             <p>
                 <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"
-                       placeholder="Your name" required>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                >
             </p>
 
             <p>
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
             </p>
 
             <p>
                 <label for="pass">Password:</label><br>
-                <input type="password" id="pass" name="pass" required>
+                <input
+                    type="password"
+                    id="pass"
+                    name="pass"
+                    required
+                >
             </p>
 
             <p>
@@ -204,6 +233,7 @@
 
             <p>
                 Gender:<br>
+
                 <input type="radio" name="gender" id="m" value="Male">
                 <label for="m">Male</label>
 
@@ -213,6 +243,7 @@
 
             <p>
                 Interests:<br>
+
                 <input type="checkbox" id="web" name="interests" value="Web">
                 <label for="web">Web</label>
 
@@ -236,6 +267,5 @@
             <button type="submit">Register</button>
         </form>
     </section>
-
 </body>
 </html>
