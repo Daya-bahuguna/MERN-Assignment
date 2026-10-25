@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daya | Profile Card</title>
+
+    <style>
+        /* Week 6.1: Include padding and border in element width */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f7ff;
+            color: #304563;
+        }
+
+        /* Sticky header stays at the top while scrolling */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #263d5c;
+            color: white;
+            padding: 14px;
+            text-align: center;
+        }
+
+        /* Profile card */
+        .card {
+            width: 300px;
+            margin: 35px auto;
+            background: white;
+            border: 2px solid #a9d3ff;
+            padding: 22px;
+            text-align: center;
+        }
+
+        /* Circular avatar */
+        .avatar {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: #b9dcff;
+            color: #263d5c;
+            font-size: 30px;
+            line-height: 76px;
+            margin: 0 auto 12px;
+            font-weight: bold;
+        }
+
+        h2 {
+            margin: 8px 0;
+            color: #477db5;
+            font-size: 22px;
+        }
+
+        .role {
+            font-size: 14px;
+            color: #7186a1;
+        }
+
+        /* Fixed-height biography with scrolling */
+        .bio {
+            height: 80px;
+            overflow: auto;
+            text-align: left;
+            border: 1px solid #cfe5ff;
+            padding: 10px;
+            margin-top: 16px;
+            font-size: 13px;
+            line-height: 1.5;
+            background: #f7fbff;
+        }
+
+        /* Fixed button stays in the bottom-right corner */
+        .fab {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 48px;
+            height: 48px;
+            border: 0;
+            background: #a9d3ff;
+            color: #263d5c;
+            font-size: 26px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>My Profile Page</header>
+
+    <div class="card">
+        <div class="avatar">D</div>
+
+        <h2>Daya</h2>
+
+        <p class="role">
+            CSE (AI/ML) Student | Aspiring Developer
+        </p>
+
+        <div class="bio">
+            Hi, I'm Daya! I'm a first-year CSE AI/ML student
+            who enjoys exploring technology, learning programming,
+            and solving problems. I'm interested in artificial
+            intelligence, robotics, and building creative projects
+            that turn ideas into reality. I believe in learning
+            something new every day and improving my skills
+            step by step.
+        </div>
+    </div>
+
+    <button class="fab" type="button" aria-label="Add">+</button>
+</body>
+</html>
