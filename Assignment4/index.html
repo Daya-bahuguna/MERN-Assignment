@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coding Club</title>
+
+    <link rel="icon" href="./favicon1_io/favicon.ico?v=2" type="image/x-icon">
+
+    
+    <style>
+        /* Week 5.1 - Basic CSS foundation */
+
+        body {
+        background-color: #f4f6ff;
+        color: #303653;
+        font-family: Arial, sans-serif;
+        padding: 25px;
+        line-height: 1.6;
+        }
+
+        nav {
+        background-color: #28345c;
+        padding: 16px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        }
+
+        nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 8px;
+        }
+
+        h1 {
+        background-color: #e3e7ff;
+        color: #5145cd;
+        text-align: center;
+        padding: 25px;
+        border-radius: 12px;
+        }
+
+        h2 {
+        color: #087f8c;
+        margin-top: 28px;
+        }
+
+        table {
+        width: 100%;
+        background-color: #ffffff;
+        border-collapse: collapse;
+        margin: 15px 0;
+        }
+
+        caption {
+        color: #5145cd;
+        font-weight: bold;
+        padding: 12px;
+        }
+
+        th {
+        background-color: #5145cd;
+        color: #ffffff;
+        padding: 12px;
+        }
+
+        td {
+        padding: 12px;
+        border: 1px solid #d9deef;
+        }
+
+        form {
+        background-color: #ffffff;
+        padding: 22px;
+        border-radius: 12px;
+        margin-top: 15px;
+        }
+
+        input, select, textarea {
+        padding: 9px;
+        border: 1px solid #c5cbe0;
+        border-radius: 6px;
+        }
+
+        button {
+        background-color: #087f8c;
+        color: #ffffff;
+        padding: 11px 22px;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.htm">About</a> |
+        <a href="register.htm">Register</a> |
+        <a href="contact.htm">Contact</a>
+    </nav>
+
+    <h1>Coding Club</h1>
+
+    <h2 id="events">Upcoming Events</h2>
+
+    <table>
+        <caption>Club Events</caption>
+
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Venue</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Web Development Workshop</td>
+                <td>16 Nov</td>
+                <td>Computer Lab</td>
+            </tr>
+            <tr>
+                <td>Code Sprint</td>
+                <td>25 Nov</td>
+                <td>Seminar Hall</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3" style="text-align: center;">Total events: 2</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2 id="register">Register</h2>
+
+    <form action="#" method="post">
+        <p>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"
+                   placeholder="Your name" required>
+        </p>
+
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+            <label for="pass">Password:</label><br>
+            <input type="password" id="pass" name="pass" required>
+        </p>
+
+        <p>
+            <label for="dob">Date of birth:</label><br>
+            <input type="date" id="dob" name="dob">
+        </p>
+
+        <p>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone">
+        </p>
+
+        <p>
+            Gender:<br>
+            <input type="radio" name="gender" id="m" value="Male">
+            <label for="m">Male</label>
+
+            <input type="radio" name="gender" id="f" value="Female">
+            <label for="f">Female</label>
+        </p>
+
+        <p>
+            Interests:<br>
+            <input type="checkbox" id="web" name="interests" value="Web">
+            <label for="web">Web</label>
+
+            <input type="checkbox" id="dsa" name="interests" value="DSA">
+            <label for="dsa">DSA</label>
+        </p>
+
+        <p>
+            <label for="branch">Branch:</label><br>
+            <select id="branch" name="branch">
+                <option>BCA</option>
+                <option>B.Tech</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="msg">Why do you want to join?</label><br>
+            <textarea id="msg" name="msg" rows="3" cols="30"></textarea>
+        </p>
+
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>
