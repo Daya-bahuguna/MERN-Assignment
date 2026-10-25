@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Daya | Profile Card</title>
+    <title>Daya | Profile Cards</title>
 
     <style>
-        /* Week 6.1: Include padding and border in element width */
         * {
             box-sizing: border-box;
         }
@@ -19,7 +18,6 @@
             color: #304563;
         }
 
-        /* Sticky header stays at the top while scrolling */
         header {
             position: sticky;
             top: 0;
@@ -30,17 +28,25 @@
             text-align: center;
         }
 
-        /* Profile card */
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding: 30px 16px;
+        }
+
         .card {
             width: 300px;
-            margin: 35px auto;
+            margin: 5px auto;
             background: white;
             border: 2px solid #a9d3ff;
+            border-radius: 16px;
             padding: 22px;
             text-align: center;
         }
 
-        /* Circular avatar */
         .avatar {
             width: 76px;
             height: 76px;
@@ -64,7 +70,6 @@
             color: #7186a1;
         }
 
-        /* Fixed-height biography with scrolling */
         .bio {
             height: 80px;
             overflow: auto;
@@ -77,7 +82,25 @@
             background: #f7fbff;
         }
 
-        /* Fixed button stays in the bottom-right corner */
+        .second-card {
+            background: #fff8fc;
+            border-color: #e8b8d5;
+        }
+
+        .second-card .avatar {
+            background: #f4c8e1;
+            color: #663b59;
+        }
+
+        .second-card h2 {
+            color: #a34f80;
+        }
+
+        .second-card .bio {
+            background: #fff0f7;
+            border-color: #edc9de;
+        }
+
         .fab {
             position: fixed;
             right: 20px;
@@ -85,6 +108,7 @@
             width: 48px;
             height: 48px;
             border: 0;
+            border-radius: 50%;
             background: #a9d3ff;
             color: #263d5c;
             font-size: 26px;
@@ -94,27 +118,39 @@
 </head>
 
 <body>
-    <header>My Profile Page</header>
+    <header>My Profile Cards</header>
 
-    <div class="card">
-        <div class="avatar">D</div>
+    <main class="cards-container">
+        <div class="card">
+            <div class="avatar">D</div>
+            <h2>Daya</h2>
+            <p class="role">CSE (AI/ML) Student | Aspiring Developer</p>
 
-        <h2>Daya</h2>
-
-        <p class="role">
-            CSE (AI/ML) Student | Aspiring Developer
-        </p>
-
-        <div class="bio">
-            Hi, I'm Daya! I'm a first-year CSE AI/ML student
-            who enjoys exploring technology, learning programming,
-            and solving problems. I'm interested in artificial
-            intelligence, robotics, and building creative projects
-            that turn ideas into reality. I believe in learning
-            something new every day and improving my skills
-            step by step.
+            <div class="bio">
+                Hi, I'm Daya! I'm a first-year CSE AI/ML student
+                who enjoys exploring technology, learning programming,
+                and solving problems. I'm interested in artificial
+                intelligence, robotics, and building creative projects
+                that turn ideas into reality. I believe in learning
+                something new every day and improving my skills
+                step by step.
+            </div>
         </div>
-    </div>
+
+        <div class="card second-card">
+            <div class="avatar">D</div>
+            <h2>Daya</h2>
+            <p class="role">Technology Enthusiast | Creative Learner</p>
+
+            <div class="bio">
+                I enjoy discovering how technology works and finding
+                creative ways to solve problems. I'm exploring web
+                development, artificial intelligence, and robotics.
+                Every new concept gives me a chance to learn,
+                experiment, and turn an idea into something useful.
+            </div>
+        </div>
+    </main>
 
     <button class="fab" type="button" aria-label="Add">+</button>
 </body>
