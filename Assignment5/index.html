@@ -51,12 +51,10 @@
             width: 76px;
             height: 76px;
             border-radius: 50%;
-            background: #b9dcff;
-            color: #263d5c;
-            font-size: 30px;
-            line-height: 76px;
+            object-fit: cover;
+            display: block;
             margin: 0 auto 12px;
-            font-weight: bold;
+            border: 2px solid #b9dcff;
         }
 
         h2 {
@@ -89,8 +87,7 @@
         }
 
         .second-card .avatar {
-            background: #f4c8e1;
-            color: #663b59;
+            border-color: #f4c8e1;
         }
 
         .second-card h2 {
@@ -125,7 +122,12 @@
 
     <main class="cards-container">
         <div class="card">
-            <div class="avatar">D</div>
+            <img
+                class="avatar"
+                src="My_Pic.jpeg"
+                alt="Daya's profile photo"
+            >
+
             <h2>Daya</h2>
             <p class="role">CSE (AI/ML) Student | Aspiring Developer</p>
 
@@ -141,7 +143,12 @@
         </div>
 
         <div class="card second-card">
-            <div class="avatar">D</div>
+            <img
+                class="avatar"
+                src="My_Pic.jpeg"
+                alt="Daya's profile photo"
+            >
+
             <h2>Daya</h2>
             <p class="role">Technology Enthusiast | Creative Learner</p>
 
