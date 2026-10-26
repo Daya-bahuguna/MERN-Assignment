@@ -16,9 +16,9 @@
         body {
             font-family: Arial, sans-serif;
             color: #12203a;
+            font-size: 1rem;
         }
 
-        /* Mobile-first navbar using Flexbox */
         nav {
             display: flex;
             flex-direction: column;
@@ -27,6 +27,10 @@
             padding: 16px;
             background: #12203a;
             color: white;
+        }
+
+        nav h2 {
+            font-size: 1.5rem;
         }
 
         nav ul {
@@ -40,6 +44,7 @@
         nav a {
             color: white;
             text-decoration: none;
+            font-size: 1rem;
         }
 
         .btn {
@@ -47,10 +52,11 @@
             border: none;
             padding: 10px 18px;
             border-radius: 6px;
+            font-size: 1rem;
             font-weight: bold;
+            cursor: pointer;
         }
 
-        /* Hero section */
         .hero {
             padding: 40px 16px;
             text-align: center;
@@ -64,17 +70,18 @@
         }
 
         .hero p {
+            font-size: 1rem;
             margin-bottom: 16px;
         }
 
         .hero img {
+            display: block;
             max-width: 100%;
             height: auto;
-            margin-top: 20px;
+            margin: 20px auto 0;
             border-radius: 12px;
         }
 
-        /* Grid: one column on mobile */
         .features {
             display: grid;
             grid-template-columns: 1fr;
@@ -90,7 +97,12 @@
         }
 
         .box h2 {
+            font-size: 1.4rem;
             margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 1rem;
         }
 
         footer {
@@ -98,9 +110,9 @@
             color: white;
             text-align: center;
             padding: 18px;
+            font-size: 1rem;
         }
 
-        /* Tablet */
         @media (min-width: 768px) {
             nav {
                 flex-direction: row;
@@ -116,7 +128,6 @@
             }
         }
 
-        /* Laptop / desktop */
         @media (min-width: 1024px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -131,7 +142,6 @@
 </head>
 
 <body>
-
     <nav>
         <h2>TravelEase</h2>
 
@@ -149,11 +159,10 @@
     <section class="hero" id="home">
         <h1>Discover Your Next Adventure</h1>
         <p>Explore beautiful places and create unforgettable memories.</p>
+
         <button class="btn" onclick="location.href='#features'">
             Start Exploring
         </button>
-
-        <br>
 
         <img
             src="https://placehold.co/700x250/dae6ff/12203a?text=Explore+the+World"
@@ -188,6 +197,5 @@
     <footer>
         © 2026 TravelEase | Explore the World
     </footer>
-
 </body>
 </html>
