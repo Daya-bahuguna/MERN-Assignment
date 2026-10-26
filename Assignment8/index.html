@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TravelEase</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #12203a;
+        }
+
+        /* Mobile-first navbar using Flexbox */
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: #12203a;
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .btn {
+            background: #ffb703;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* Hero section */
+        .hero {
+            padding: 40px 16px;
+            text-align: center;
+            background: #2f5bea;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            margin-bottom: 16px;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 12px;
+        }
+
+        /* Grid: one column on mobile */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            padding: 20px;
+        }
+
+        .box {
+            background: #eef2ff;
+            padding: 24px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .box h2 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #12203a;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) {
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .hero {
+                padding: 60px 30px;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Laptop / desktop */
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .features {
+                grid-template-columns: repeat(3, 1fr);
+                padding: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>TravelEase</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Destinations</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <button class="btn" onclick="location.href='#features'">
+            Explore
+        </button>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Discover Your Next Adventure</h1>
+        <p>Explore beautiful places and create unforgettable memories.</p>
+        <button class="btn" onclick="location.href='#features'">
+            Start Exploring
+        </button>
+
+        <br>
+
+        <img
+            src="https://placehold.co/700x250/dae6ff/12203a?text=Explore+the+World"
+            alt="Travel landscape"
+        >
+    </section>
+
+    <section class="features" id="features">
+        <div class="box">
+            <h2>🏔️ Mountains</h2>
+            <p>Discover peaceful mountain destinations.</p>
+        </div>
+
+        <div class="box">
+            <h2>🏖️ Beaches</h2>
+            <p>Relax beside beautiful beaches.</p>
+        </div>
+
+        <div class="box">
+            <h2>🏙️ Cities</h2>
+            <p>Explore exciting cities and cultures.</p>
+        </div>
+    </section>
+
+    <section class="features" id="about">
+        <div class="box">
+            <h2>About TravelEase</h2>
+            <p>Your simple guide to planning memorable trips.</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 TravelEase | Explore the World
+    </footer>
+
+</body>
+</html>
