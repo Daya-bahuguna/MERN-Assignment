@@ -51,11 +51,14 @@ main {
     min-width: 0;
 }
 
+main h2 {
+    margin-bottom: 16px;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 12px;
-    margin-top: 16px;
 }
 
 .item {
