@@ -19,6 +19,7 @@
             font-size: 1rem;
         }
 
+        /* Flexbox navbar */
         nav {
             display: flex;
             flex-direction: column;
@@ -57,6 +58,7 @@
             cursor: pointer;
         }
 
+        /* Hero section */
         .hero {
             padding: 40px 16px;
             text-align: center;
@@ -82,6 +84,7 @@
             border-radius: 12px;
         }
 
+        /* CSS Grid for page sections */
         .features {
             display: grid;
             grid-template-columns: 1fr;
@@ -113,6 +116,7 @@
             font-size: 1rem;
         }
 
+        /* Tablet layout */
         @media (min-width: 768px) {
             nav {
                 flex-direction: row;
@@ -128,6 +132,7 @@
             }
         }
 
+        /* Desktop layout */
         @media (min-width: 1024px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -170,29 +175,31 @@
         >
     </section>
 
-    <section class="features" id="features">
-        <div class="box">
-            <h2>🏔️ Mountains</h2>
-            <p>Discover peaceful mountain destinations.</p>
-        </div>
+    <main>
+        <section class="features" id="features">
+            <div class="box">
+                <h2>🏔️ Mountains</h2>
+                <p>Discover peaceful mountain destinations.</p>
+            </div>
 
-        <div class="box">
-            <h2>🏖️ Beaches</h2>
-            <p>Relax beside beautiful beaches.</p>
-        </div>
+            <div class="box">
+                <h2>🏖️ Beaches</h2>
+                <p>Relax beside beautiful beaches.</p>
+            </div>
 
-        <div class="box">
-            <h2>🏙️ Cities</h2>
-            <p>Explore exciting cities and cultures.</p>
-        </div>
-    </section>
+            <div class="box">
+                <h2>🏙️ Cities</h2>
+                <p>Explore exciting cities and cultures.</p>
+            </div>
+        </section>
 
-    <section class="features" id="about">
-        <div class="box">
-            <h2>About TravelEase</h2>
-            <p>Your simple guide to planning memorable trips.</p>
-        </div>
-    </section>
+        <section class="features" id="about">
+            <div class="box">
+                <h2>About TravelEase</h2>
+                <p>Your simple guide to planning memorable trips.</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
         © 2026 TravelEase | Explore the World
